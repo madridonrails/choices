@@ -1,0 +1,9 @@
+es-ES:
+  clients:
+    clients: Clientes
+    create:
+      success: El cliente se ha creado correctamente
+    customizations: Especificar productos
+    edit_client: Editar cliente
+    new_client: Nuevo cliente
+    no_clients: No hay clientes

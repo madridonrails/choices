@@ -1,0 +1,7 @@
+<div class="ajaxforms-header">
+  <%= render :partial => '/client_product_customizations/product/header' %>
+</div>
+<ul>
+  <li  class="new-form"><%= render :partial => '/client_product_customizations/product/new_form', :locals => {:client_product_customization => @client_product_customization, :product => @product} if @client_product_customization.new_record? %></li>
+  <%= render :partial => '/client_product_customizations/product/edit_form', :collection => @product.customizations, :as => :client_product_customization, :locals => {:product => @product} %>
+</ul>

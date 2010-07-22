@@ -1,0 +1,300 @@
+html, body{
+  background-image: url(../images/pink-background.gif);
+}
+
+h1{
+  color:#5A90C0;
+  font-size:2.5em;
+  display:inline-block;
+  margin:0;
+}
+
+h1 span{
+  background-color:#CCDEEB;
+  padding:0 0.5em;
+  -moz-border-radius-topleft:0.5em;
+  -moz-border-radius-topright:0.5em;
+}
+
+h2{
+  display:inline-block;
+  color: #F3C329;
+}
+
+input[type="text"]{
+  border:0 none;
+  background-color:white;
+}
+
+label{
+  display:inline-block;
+}
+
+form{
+  padding-top:1em;
+  background-color:#CCDEEB;
+  margin-bottom:2em;
+  -moz-border-radius-bottomleft:0.5em;
+  -moz-border-radius-bottomright:0.5em;
+  -moz-border-radius-topright:0.5em;
+}
+
+form fieldset{
+  border: 0 none;
+  margin:0;
+}
+
+form legend{
+  display:none;
+}
+
+form li, ul li{
+  list-style:none;
+  display:inline-block;
+}
+
+form li label, #filter td{
+  font-size:1.2em;
+  color:#2B2D69;
+  font-weight:bold;
+}
+
+ul{
+  margin:0;
+}
+
+button, a.button{
+  display:inline-block;
+  float:none;
+}
+
+/* IDS */
+#logo{
+  height:1px;
+}
+
+#logo img{
+  width:100%;
+}
+
+#navigation{
+  text-align:left;
+  font-size:1.5em;
+  border-bottom:1px solid #CCCCCC;
+  border-top:1px solid #CCCCCC;
+  padding-top:0.4em;
+  padding-bottom:0.4em;
+  margin-bottom:2em;
+}
+
+#navigation ul{
+  margin:0px;
+ }
+ 
+#navigation li{
+  list-style:none;
+  display:block;
+  float:left;
+}
+
+#navigation li a{
+  text-decoration:none;
+  color:#2B2D69;
+  width:100%;
+	padding:0.8em 1.2em 0.8em 1.2em;
+}
+
+#navigation li.current a{
+  background-color:#9889B5;
+  color:#FFFFFF
+}
+
+#navigation li :hover, #navigation li.current a:hover{
+  background-color:#FFC200;
+  color:#FFFFFF;
+}
+
+#navigation a:hover{
+  border:solid #CCCCCC 1px;
+}
+
+#filter{
+  margin-top:2em;
+  -moz-border-radius-bottomleft:0.5em;
+  -moz-border-radius-bottomright:0.5em;
+  -moz-border-radius-topleft:0.5em;
+  -moz-border-radius-topright:0.5em;
+}
+
+#content{
+}
+
+#main{
+  background-color:#FFFFFF;
+  margin-top:1em;
+  margin-bottom:1em;
+  padding:1.2em;
+  -moz-border-radius-bottomleft:0.5em;
+  -moz-border-radius-bottomright:0.5em;
+  -moz-border-radius-topleft:0.5em;
+  -moz-border-radius-topright:0.5em;
+
+}
+
+
+#items-list{
+  margin:1.5em 0em;
+  
+}
+
+#items-list th, #items-list td{
+  padding:0.3em 1em;
+}
+
+#items-list th{
+  background-color:#CCDEEB;
+  border:1px solid #FFFFFF;
+  color:#5A90C0;
+  font-size:1.2em;
+  font-weight:bold;
+}
+
+#delivery-note-order-info{
+  padding:0;
+  margin:0;
+  -moz-border-radius-topright:0em;
+
+}
+
+#delivery-note-order-lines, #summary-total{
+  margin-left:2.5em;
+  border-top:solid;
+  margin-top:1.2em;
+  padding-top:1.2em;
+}
+
+form.complex-form{
+  margin-bottom:0;
+  -moz-border-radius-bottomleft:0em;
+  -moz-border-radius-bottomright:0em;
+}
+
+.pagination{
+  font-size:1.2em;
+  text-align:center;
+}
+
+.pagination a, .pagination span{
+  padding:0.2em;
+  border:solid 1px;
+}
+
+.pagination a{
+  color:#2B2D69;
+  border:solid 1px;
+}
+
+.pagination a:hover{
+  background-color:#FFC200;
+  color:#FFFFFF;
+}
+
+.pagination span{
+  background-color:#9889B5;
+  color:#FFFFFF;
+}
+
+.pagination a{
+  text-decoration:none;
+}
+
+#footer{
+  text-align:center;
+}
+
+.ajaxforms{
+  -moz-border-radius-bottomleft:0.5em;
+  -moz-border-radius-bottomright:0.5em;
+  -moz-border-radius-topleft:0.5em;
+  -moz-border-radius-topright:0.5em;
+}
+
+.ajaxforms li.new-form{
+  -moz-border-radius-topright:0.5em;
+}
+
+.ajaxforms li{
+  background-color:#F8D66A;
+}
+
+.ajaxforms input{
+  text-align:right;
+}
+
+.ajaxforms form{
+  background-color:transparent;
+  padding:0;
+  margin:0;
+  padding-bottom:0.5em;
+}
+
+.ajaxforms form fieldset{
+  padding-top:0;
+  padding-bottom:0;
+}
+
+.ajaxforms-header{
+  background-color:#FFC200;
+  padding-left:1em;
+  padding-top:0.5em;
+  padding-right:0em;
+  padding-bottom:0.5em;
+  -moz-border-radius-topleft:0.5em;
+  -moz-border-radius-topright:0.5em;
+  display:inline-block;
+}
+
+.ajaxforms-header span{
+  display:inline-block;
+  text-align:center;
+}
+
+/* classes */
+
+.add-button{
+  text-decoration:none;
+  float:right;
+  text-align:right;
+}
+
+.add-button span{
+  font-size:1.5em;
+  vertical-align:top;
+  margin-right:1em;
+  color:#9FD50E;
+}
+
+.show-info{
+  background-color:#CCDEEB;
+  -moz-border-radius-topright:0.5em;
+  -moz-border-radius-bottomright:0.5em;
+  -moz-border-radius-bottomleft:0.5em;
+  padding:1em;
+  display:inline-block;
+}
+
+#content .show-info ul{
+  margin-right:0px;
+}
+
+.show-info span{
+  display:inline-block;
+}
+
+.show-info li{
+  margin-left:3em;
+}
+
+.odd{
+  background-color:#EDF4E3
+ }

@@ -1,0 +1,23 @@
+<%=  form_tag orders_url, :method => :get, :id => 'filter' %>
+  <table id="table-filter">
+    <tr>
+      <td><%= t 'activerecord.attributes.order.code' %></td>
+      <td><%= text_field_tag('filter[code]') %></td>
+    </tr>
+    <tr>
+      <td><%= t 'activerecord.attributes.order.client_id' %></td>
+      <td><%= select_tag('filter[client_id]', options_for_select([['', nil]] + Client.all.collect{|c| [c.name, c.id]})) %></td>
+    </tr>
+    <tr>
+      <td><%= t'orders.filter.from_date' %></td>
+      <td><%= calendar_date_select_tag('filter[from_date]') %></td>
+    </tr>
+    <tr>
+      <td><%= t 'orders.filter.to_date' %></td>
+      <td><%= calendar_date_select_tag('filter[to_date]') %></td>
+    </tr>
+  </table>
+  <button type=\"submit\" class=\"positive\">
+    <%= image_tag 'icons/tick.png', :alt => t('general.filter'), :title => t('general.filter')%><span><%=  t'general.filter'%></span>
+  </button>
+</form>

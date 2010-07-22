@@ -1,0 +1,59 @@
+<script>
+function serialize_fields(){
+  var fields_ids = ['order_client_id', 'order_code', 'order_responsible']
+  var fields = new Array();
+  fields_ids.each(function(item){
+    fields.push(Form.Element.serialize(item))
+  });
+
+  return fields.join('&');
+}
+</script>
+
+<ol id="order-form-fields" class="span-22 last">
+  <li>
+    <%= f.label :code, t('activerecord.attributes.order.code'), :class=>'span-3' %>
+    <%= f.text_field :code, :class => "span-5" %>
+  </li>
+  <li>
+    <%= f.label :client_id, t('activerecord.attributes.order.client_id'), :class => 'span-3' %>
+    <%= f.select(:client_id, Client.all.collect{|s| [s.name, s.id]}, :class => "span-5")%>
+    <%= link_to_remote t('orders.fill_in_from_client.text'),
+      :url => {:controller => :orders, :action => :update_order_from_client, :id => @order.id},
+      :with => 'serialize_fields()',
+      :update => 'data',
+      :html => {:title => t('orders.fill_in_from_client.title')} %>
+  </li>
+
+  <li>
+    <%= f.label :responsible, t('activerecord.attributes.order.responsible'), :class => 'span-3' %>
+    <%= f.text_field :responsible, :class => "span-5" %>
+  </li>
+  <li>
+    <%= f.label :address, t('activerecord.attributes.order.address'), :class => 'span-3' %>
+    <%= f.text_field :address, :class => "span-5" %>
+  </li>
+  <li>
+    <%= f.label :postal_code, t('activerecord.attributes.order.postal_code'), :class => 'span-3' %>
+    <%= f.text_field :postal_code, :class => "span-5" %>
+  </li>
+  <li>
+    <%= f.label :city, t('activerecord.attributes.order.city'), :class => 'span-3' %>
+    <%= f.text_field :city, :class => "span-5" %>
+  </li>
+  <li>
+    <%= f.label :town, t('activerecord.attributes.order.town'), :class => 'span-3' %>
+    <%= f.text_field :town, :class => "span-5" %>
+  </li>
+  <li>
+    <%= f.label :internal_code, t('activerecord.attributes.order.internal_code'), :class => 'span-3' %>
+    <%= f.text_field :internal_code, :class => "span-5" %>
+  </li>
+  <li>
+    <%= f.label :date, t('activerecord.attributes.order.date'), :class => 'span-3' %>
+    <!--%= f.text_field :date, :class => "span-5" %-->
+    <%= calendar_date_select :order, :date, :class => 'span-4' %>
+  </li>
+  <!--%= form_buttons orders_path%-->
+  <%= order_form_buttons(orders_path, @order) %>
+</ol>

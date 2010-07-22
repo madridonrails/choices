@@ -1,0 +1,9 @@
+<%= object_messages(@invoice) %>
+<h1><span><%= t'invoices.edit_invoice' %></span></h1>
+<%  form_for @invoice, :url => invoice_url(@invoice), :method => :put, :html => {:class => 'complex-form'} do |f| %>
+  <fieldset>
+    <legend><%= t 'general.new' %></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>
+<%= render :partial => '/orders/order_resume', :locals => {:order => @invoice.order} %>

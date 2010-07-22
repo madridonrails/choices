@@ -1,0 +1,10 @@
+<%= object_messages %>
+<%= render :partial => 'filter' unless @invoices.empty? and @filter.nil? %>
+<h1><%= t 'invoices.invoices' %></h1>
+<% unless @invoices.empty? %>
+  <table id="items-list">
+    <%= render :partial => 'header' %>
+    <%= render :partial => 'invoice', :collection => @invoices %>
+  </table>
+<% end %>
+<!--%= will_paginate(@invoices, :prev_label => t('pagination.prev'), :next_label => t('pagination.next'), :params => params.clone.delete_if{|k,v| k == 'controller' || k == 'action' || k == 'page'}) %-->

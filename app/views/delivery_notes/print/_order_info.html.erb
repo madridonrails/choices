@@ -1,0 +1,23 @@
+<table id="print-order-info">
+  <colgroup><col/><col/><col/><col/><col/><col/></colgroup>
+  <thead>
+    <tr>
+      <th><%= t'delivery_notes.print.order_date' %></th>
+      <th><%= t'delivery_notes.print.responsible' %></th>
+      <th><%= t'delivery_notes.print.client' %></th>
+      <th><%= t'delivery_notes.print.address' %></th>
+      <th><%= t'delivery_notes.print.postal_code' %></th>
+      <th><%= t'delivery_notes.print.client_cif' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= h order.date %></td>
+      <td><%= h order.client.responsible rescue ''%></td>
+      <td><%= h order.client.name rescue ''%></td>
+      <td><%= h order.address %></td>
+      <td><%= h order.client.postal_code rescue ''%></td>
+      <td><%= h order.client.cif rescue ''%></td>
+    </tr>
+  </tbody>
+</table>

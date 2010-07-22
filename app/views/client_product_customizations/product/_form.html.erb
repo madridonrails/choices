@@ -1,0 +1,18 @@
+<%= f.select(:client_id, options_for_select_client(@product, client_product_customization), {}, :class=>'span-5') %>
+<%= f.text_field :wholesale_price, :class=>'span-3'%>
+<%= f.text_field :code, :class=>'span-3'%>
+<% button_id = client_product_customization.new_record? ? 'new-product-product-price' : "edit-product-product-price-#{client_product_customization.id}" %>
+<button id="<%= button_id %>" type="submit" class="positive submit-subform">
+  <%= image_tag '../stylesheets/icons/tick.png' %>
+  <%= client_product_customization.new_record? ? t('general.create') : t('general.update') %>
+</button>
+
+<% unless client_product_customization.new_record? %>
+    <%= link_to_remote (image_tag('../stylesheets/icons/cross.png') + t('general.delete')),
+      :url => {:controller => :client_product_customizations, :action => :destroy, :id => client_product_customization.id, :product_id => client_product_customization.product.id},
+      :method => :delete,
+      :update => 'client-product-prices',
+      :html => {:title => t('general.delete'), :class => 'button negative'} unless client_product_customization.new_record?
+    %>
+<% end %>
+<%= object_messages(client_product_customization) %>

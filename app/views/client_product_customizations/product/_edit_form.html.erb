@@ -1,0 +1,14 @@
+<li>
+<% remote_form_for :client_product_customization, client_product_customization,
+    :url => { :controller => 'client_product_customizations',
+              :action => :update,
+              :product_id => product.id,
+              :id => client_product_customization.id},
+    :html => {:method => :put, :class=>'subform'},
+    :update => 'client-product-prices' do |f| %>
+  <fieldset>
+    <legend style="display:none;">&nbsp;</legend>
+    <%= render :partial => '/client_product_customizations/product/form', :locals => {:f => f, :client_product_customization => client_product_customization} unless product.blank?%>
+  </fieldset>
+<% end %>
+</li>

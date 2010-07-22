@@ -1,0 +1,50 @@
+es-ES:
+  orders:
+    create:
+      success: El pedido se ha creado correctamente
+    delivery_note:
+      edit: Editar albarán
+      new: Crear albarán
+      not_delivery_note: No hay albarán
+    edit_order: Editar pedido
+    edit_states: Editar estado del pedido ({{current_state}})
+    events:
+      cancel:
+        alt: Cancelar
+        button_name: Cancelar
+        title: Cancelar pedido
+      deliver:
+        alt: Enviar
+        button_name: Enviar
+        title: Enviar pedido
+      mark_as_pendant:
+        alt: Marcar como pendiente
+        button_name: Pendiente
+        title: Marcar pedido como pendiente
+      mark_as_with_incidences:
+        alt: Marcar con incidencias
+        button_name: Incidencias
+        title: Marcar pedido con incidencias
+    fill_in_from_client:
+      text: Rellenar
+      title: Rellenar con los datos del cliente seleccionado
+    filter:
+      from_date: Desde
+      to_date: Hasta
+    invoice:
+      edit: Editar factura
+      new: Crear factura
+    new_order: Nuevo pedido
+    new_order_line: Nueva línea de pedido
+    no_client_selected: Sin cliente
+    no_orders: No hay pedidos
+    order_lines: Líneas de pedido
+    orders: Pedidos
+    states:
+      canceled: Cancelado
+      delivered: Enviado
+      pendant: Pendiente
+      with_incidences: Con incidencias
+    total_amount: ": {{total}}"
+    update:
+      success: El pedido se ha actualizado correctamente

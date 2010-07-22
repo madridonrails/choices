@@ -1,0 +1,9 @@
+es-ES:
+  navigation:
+    items:
+      clients: Clientes
+      delivery_notes: Albaranes
+      invoices: Facturas
+      orders: Pedidos
+      products: Productos
+

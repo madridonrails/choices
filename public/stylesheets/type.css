@@ -1,0 +1,33 @@
+.ajaxforms-header span{
+  font-weight: bold;
+  font-size:1.2em;
+  color:#584404;
+}
+
+.show-info span{
+  font-size:1.2em;
+  padding-top:0.2em;
+}
+
+.summary-total{
+  font-weight: bold;
+  font-size:1.2em;
+}
+
+.summary-total td{
+  font-weight: bold;
+}
+
+div.fieldWithErrors{
+  display:inline;
+}
+
+.fieldWithErrors label{
+  color:#FF0000;
+}
+
+.fieldWithErrors input[type="text"],
+.fieldWithErrors select{
+  border: 1px solid #FF0000;
+
+}

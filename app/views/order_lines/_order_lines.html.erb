@@ -1,0 +1,7 @@
+<%= render :partial => '/order_lines/header' if @order_line.new_record?%>
+<ul>
+  <li class="new-form"><%= render :partial => '/order_lines/new_form', :locals => {:order_line => @order_line, :order => @order} if @order_line.new_record? rescue false%></li>
+</ul>
+<ul id="edit-order-lines">
+  <%= render :partial => '/order_lines/edit_form', :collection => @order.order_lines, :as => :order_line, :locals => {:order => @order} %>
+</ul>

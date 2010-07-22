@@ -1,0 +1,17 @@
+      <%= f.select(:product_id, options_for_select_product_for_order_line(order, order_line), {}, :class=>'span-4')%>
+      <%= f.text_field :quantity, :class => 'span-3' %>
+      <%= f.text_field :code, :class=>'span-4'%>
+      <%= f.text_field :cost_price, :class=>'span-4'%>
+      <%= f.text_field :wholesale_price, :class=>'span-4'%>
+    <button type="submit" class="positive">
+      <%= image_tag '../stylesheets/icons/tick.png' %>
+      <%= order_line.new_record? ? t('general.create') : t('general.update') %>
+    </button>
+    <% unless order_line.new_record? %>
+        <%= link_to_remote (image_tag('icons/cross.png') + t('general.delete')),
+          :url => {:controller => :order_lines, :action => :destroy, :id => order_line.id, :order_id => order_line.order.id},
+          :method => :delete,
+          :update => 'order-lines',
+          :html => {:title => t('general.delete'), :class => 'button negative'} unless order_line.new_record?
+        %>
+    <% end %>

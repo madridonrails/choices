@@ -1,0 +1,23 @@
+<div id="delivery-note-order-info" class="show-info">
+  <%= render :partial =>  '/orders/show_order', :locals => {:order => order}%>
+  <table id="delivery-note-order-lines">
+    <%= render :partial => 'order_lines_header' %>
+    <%= render :partial => '/order_lines/show_order_line', :collection => order.order_lines, :as => :order_line %>
+  </table>
+  <table id="summary-total">
+    <colgroup><col/><col/><col/><col/><col/></colgroup>
+    <tr>
+      <th><%= t'general.price_before_taxes' %></th>
+      <th><%= t'general.vat' %></th>
+      <th><%= t'activerecord.attributes.client.equivalence_surcharge' %></th>
+      <th><%= t'general.total' %></th>
+    </tr>
+    <tr>
+      <td><%= number_to_currency order.price_before_taxes %></td>
+      <td><%= order.client.taxes rescue DEFAULT_TAXES%> %</td>
+      <td><%= order.client.equivalence_surcharge||= DEFAULT_EQUIVALENCE_SURCHARGE rescue DEFAULT_EQUIVALENCE_SURCHARGE %> %</td>
+      <td><%= number_to_currency order.total_wholesale_price %></td>
+    </tr>
+  </table>
+  
+</div>

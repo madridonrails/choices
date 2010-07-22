@@ -1,0 +1,22 @@
+choices:
+  path: /home/javier/proyectos/choices/public/stylesheets/
+  plugins:
+    - fancy-type
+    - buttons
+  semantic_classes:
+    "h1": ".span-21, div.span-21"
+    "#logo": ".span-3, div.span-3, last"
+    "#navigation": ".span-21, div.span-21"
+    "#items-list": "clear"
+    "#delivery-note-order-info, #footer, #content form, #main, #data": ".span-24, div.span-24 clear last"
+    ".show-info, #content .show-info form": ".span-22, div.span-22"
+    "#content form li, .show-info li": "span-9 append-1"
+    "#content form li label, .show-info li span label": "span-4"
+    "#content form li.form-buttons": "span-10, prepend-14"
+    "#content .show-info ul": ".span-11, div.span-11"
+    "#content .show-info li.form-buttons": "span-7, prepend-15"
+    "#delivery-note-order-lines, #summary-total": "span-22, div.span-22"
+    "#print-invoice-info, #print-order-info, #print-order-lines-info, #print-order-summary": "span-24, div.span-24"
+    "#data #filter": "span-16, div.span-16"
+    "#filter table": "span-13, div.span-13"
+    ".error, .success, .notice": "span-20, div.span-20"

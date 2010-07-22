@@ -1,0 +1,14 @@
+<%unless delivery_note.blank?%>
+  <% td_class = cycle('', ' class="odd"') %>
+  <tr>
+    <td<%= td_class %>><%= h delivery_note.order.code rescue '' %> </td>
+    <td<%= td_class %>><%= h delivery_note.order.client.name rescue '' %></td>
+    <td<%= td_class %>><%= h delivery_note.packages %></td>
+    <td align="center" <%= td_class %>>
+       <!--%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), delivery_note_url(delivery_note) %-->
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_delivery_note_url(delivery_note) %>
+       <%= link_to image_tag('print_16.png', :alt => t('general.print'), :title => t('general.print')), {:controller => :delivery_notes, :action => :print, :id => delivery_note} %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), delivery_note_url(delivery_note), :method => 'delete', :confirm => t('general.are_you_sure') %>
+    </td>
+  </tr>
+<% end %>

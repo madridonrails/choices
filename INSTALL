@@ -1,0 +1,11 @@
+INSTRUCTION FOR INSTALLING THE APPLICATION
+
+-Copy config/database.example.yml to config/database.yml and edit this file in order to configure your database
+
+-Install gems dependencies via rake gems:install. These gems can be found at the file config/environment.rb
+
+-Run rake db:create:all
+
+-Run rake db:migrate
+
+-Run rake application:products:init

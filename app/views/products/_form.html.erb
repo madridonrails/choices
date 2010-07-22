@@ -1,0 +1,21 @@
+<ul>
+  <li>
+    <%= f.label :code, t('activerecord.attributes.product.code'), :class => 'span-3' %>
+    <%= f.text_field :code, :class =>  'span-5' %>
+  </li>
+  <li>
+    <%= f.label :description, t('activerecord.attributes.product.description'), :class => 'span-3' %>
+    <%= f.text_field :description, :class =>  'span-5' %>
+  </li>
+  <li>
+    <%= f.label :cost_price, t('activerecord.attributes.product.cost_price'), :class => 'span-3' %>
+    <%= f.text_field :cost_price, :class =>  'span-5' %>
+  </li>
+  <li>
+    <%= f.label :wholesale_price, t('activerecord.attributes.product.wholesale_price'), :class => 'span-3' %>
+    <%= f.text_field :wholesale_price, :class =>  'span-5' %>
+  </li>
+  <li>
+    <%= form_buttons products_path%>
+  </li>
+</ul>

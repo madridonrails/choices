@@ -1,0 +1,9 @@
+<%= object_messages %>
+<h1><%= t 'delivery_notes.delivery_notes' %></h1>
+<% unless @delivery_notes.empty? %>
+  <table id="items-list">
+    <%= render :partial => 'header' %>
+    <%= render :partial => 'delivery_note', :collection => @delivery_notes %>
+  </table>
+<% end %>
+<!--%= will_paginate(@delivery_notes, :prev_label => t('pagination.prev'), :next_label => t('pagination.next'), :params => params.clone.delete_if{|k,v| k == 'controller' || k == 'action' || k == 'page'}) %-->

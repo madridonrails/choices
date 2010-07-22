@@ -1,0 +1,6 @@
+<% remote_form_for :client_product_customization, client_product_customization, :url => product_client_product_customizations_path(product), :update => 'client-product-prices', :html => {:class=>'subform'} do |f| %>
+  <fieldset>
+    <legend><%= t 'clients.new_client_product_customization' %></legend>
+    <%= render :partial => '/client_product_customizations/product/form', :locals => {:f => f, :client_product_customization => client_product_customization} unless product.blank?%>
+  </fieldset>
+<% end %>

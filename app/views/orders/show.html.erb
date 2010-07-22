@@ -1,0 +1,12 @@
+<%unless @order.blank?%>
+<h1><span><%= @order.code %></span></h1>
+<div class="show-info">
+  <%= render :partial => 'show_order', :locals => {:order => @order} %>
+  <%= link_to image_tag('pencil_16.png', :alt => t('general.edit')) + t('general.edit'), edit_order_url(@order), :class => 'button', :title => t('general.edit') %>
+  <%= link_to image_tag('left_16.png', :alt => t('general.cancel')) + 'Volver', orders_url, :class => 'button', :title => t('general.cancel') %>
+  <%= @order.delivery_note.blank? ? link_to(image_tag('delivery_note.png', :alt => t('orders.delivery_note.new')) + t('activerecord.models.delivery_note'), new_order_delivery_note_path(@order), :title => t('orders.delivery_note.new'), :class => 'button') : link_to(image_tag('delivery_note.png', :alt => t('orders.delivery_note.edit')) + t('activerecord.models.delivery_note'), edit_delivery_note_path(@order.delivery_note), :title => t('orders.delivery_note.edit'), :class => :button) %>
+  <%= @order.invoice.blank? ? link_to(image_tag('cash_register.png', :alt => t('orders.invoice.new')) + t('activerecord.models.invoice'), new_order_invoice_path(@order), :title => t('orders.invoice.new'), :class => 'button') : link_to(image_tag('cash_register.png', :alt => t('orders.invoice.edit')) + t('activerecord.models.invoice'), edit_invoice_path(@order.invoice), :title => t('orders.invoice.edit'), :class => 'button') %>
+</div>
+
+<% end %>
+<p class="add-link" ><%= link_to t('general.edit'), edit_order_url(@order) %> | <%= link_to t('general.back'), orders_url %></p>

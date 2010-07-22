@@ -1,0 +1,38 @@
+es-ES:
+  invoices:
+    create:
+      success: La factura se ha creado correctamente
+    edit_invoice: Editar factura
+    filter:
+      from_date: Desde
+      incidences: Incidencias
+      paid: Pagado
+      to_date: Hasta
+    invoices: Facturas
+    print:
+      address: Dirección
+      client: Cliente
+      client_cif: CIF
+      delivery_note_code: Número de albarán
+      invoice_code: Número de factura
+      order_code:  Número de pedido
+      order_date: Fecha
+      order_lines_total: Total
+      payment_method: Forma de pago
+      postal_code: Código Postal
+      price_after_taxes: Total factura
+      price_before_taxes: Importe bruto
+      product_code: Código
+      product_description: Descripción
+      product_price: Precio unitario
+      product_quantity: Unidades
+      product_total: Total (IVA no incluido)
+      provider: Número de proveedor
+      responsible: Atención
+      taxes: IVA
+      uneco: UNECO
+    new_invoice: Nueva factura
+    no_invoices: No hay facturas
+    no_delivery_note: Sin albarán
+    update:
+      success: La factura se ha modificado correctamente

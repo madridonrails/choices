@@ -1,0 +1,4 @@
+<h2 class="span-24"><%= t'orders.edit_states', :current_state => t("orders.states.#{order.aasm_current_state}") %></h2>
+<div class="span-24 append-bottom">
+  <%= order_state_events(order) %>
+</div>

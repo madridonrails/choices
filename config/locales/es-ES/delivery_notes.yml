@@ -1,0 +1,19 @@
+es-ES:
+  delivery_notes:
+    delivery_notes: Albaranes
+    edit_delivery_note: Editar albarán
+    new_delivery_note: Nuevo albarán
+    no_delivery_notes: No hay albaranes
+    print:
+      address: Dirección
+      client: Cliente
+      client_cif: CIF
+      delivery_note_code: Número de albarán
+      order_code: Número de pedido
+      order_date: Fecha de pedido
+      order_lines_total: Total
+      packages: Número de bultos
+      postal_code: Código Postal
+      provider: Proveedor
+      responsible: Atención
+      uneco: UNECO

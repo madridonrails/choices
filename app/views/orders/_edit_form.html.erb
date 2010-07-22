@@ -1,0 +1,12 @@
+<h1><span><%= "#{t'orders.edit_order'} #{@order.code}" %></span></h1>
+<% form_for @order, order_url(@order), :method => :put do |f|%>
+    <fieldset>
+      <legend><%= t 'orders.edit_order' %> <%= @order.code %></legend>
+      <%= render :partial => 'form', :locals => {:f => f} %>
+    </fieldset>
+  <% end %>
+<%= render :partial => 'order_states', :locals => {:order => @order} %>
+<h2><%= t'orders.order_lines' %></h2>
+<div id="order-lines" class="ajaxforms">
+  <%= render :partial => '/order_lines/order_lines', :locals => {:order => @order, :order_line => @order_line} %>
+</div>

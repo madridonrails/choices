@@ -1,0 +1,9 @@
+<%= object_messages(@product) %>
+<h1><span><%= t'products.new_product' %></span></h1>
+<%  form_for @product, :url => products_url do |f| %>
+  <fieldset>
+    <legend><%= t 'general.new' %><br/></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>
+

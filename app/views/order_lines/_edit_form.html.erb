@@ -1,0 +1,12 @@
+<li>
+<% remote_form_for  :order_line,
+                    order_line,
+                    :url => order_order_line_path(order, order_line),
+                    :html => {:method => :put},
+                    :update => 'edit-order-lines' do |f| %>
+  <fieldset>
+    <legend><%= t'order_lines.edit_order_line' %></legend>
+    <%= render :partial => '/order_lines/form', :locals => {:f => f, :order_line => order_line, :order => order} %>
+  </fieldset>
+<% end %>
+</li>

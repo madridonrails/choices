@@ -1,0 +1,29 @@
+  <ul>
+    <li><span><label><%= t 'activerecord.attributes.order.client_id' %>: </label><%= h order.client.name rescue ''%> </span></li>
+    <% unless (order.client.uneco.blank? rescue true) %>
+      <li><span><label><%= t 'activerecord.attributes.client.uneco' %>: </label><%= h order.client.uneco rescue ''%> </span></li>
+    <% end %>
+    <li><span><label><%= t 'activerecord.attributes.order.cif' %>: </label><%= h order.client.cif rescue ''%> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.order.responsible' %>: </label><%= h(order.responsible) %> </span></li>
+    <% unless order.code.blank? %>
+      <li><span><label><%= t 'activerecord.attributes.order.code' %>: </label><%= h(order.code) %> </span></li>
+    <% end %>
+    <li><span><label><%= t 'activerecord.attributes.order.internal_code' %>: </label><%= h(order.internal_code) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.order.date' %>: </label><%= h order.date %> </span></li>
+    <li><span><label><%= t 'activerecord.models.delivery_note' %>: </label><%= order.delivery_note.nil? ? t('orders.delivery_note.not_delivery_note') : h(order.delivery_note.code) %> </span></li>
+    <% unless(order.client.provider_code.blank? rescue true) %>
+      <li><span><label><%= t 'activerecord.attributes.client.provider_code' %>: </label><%= h order.client.provider_code rescue '' %> </span></li>
+    <% end %>
+    <% unless(order.client.equivalence_surcharge.blank? rescue true) %>
+      <li><span><label><%= t 'activerecord.attributes.client.equivalence_surcharge' %>: </label><%= h order.client.equivalence_surcharge rescue '' %> % </span></li>
+    <% end %>
+    <% if(order.client.days_to_pay.blank? rescue true) %>
+      <li><span><label><%= t 'activerecord.attributes.client.days_to_pay' %>: </label><%= h order.client.days_to_pay rescue '' %></span></li>
+    <% end %>
+  </ul>
+  <ul>
+    <li><span><label><%= t 'activerecord.attributes.order.address' %>: </label><%= h(order.address) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.order.postal_code' %>: </label><%= h(order.postal_code) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.order.town' %>: </label><%= h(order.town) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.order.city' %>: </label><%= h(order.city) %> </span></li>
+  </ul>

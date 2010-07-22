@@ -1,0 +1,17 @@
+<table id="print-order-summary">
+  <colgroup><col/><col/><col/></colgroup>
+  <thead>
+    <tr>
+      <th class="span-1"><%= t'invoices.print.price_before_taxes' %></th>
+      <th class="span-1"><%= t'invoices.print.taxes' %></th>
+      <th class="span-22"><%= t'invoices.print.price_after_taxes' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= h number_to_currency order.price_before_taxes %></td>
+      <td class="price"><%= h order.client.taxes rescue DEFAULT_TAXES %> %</td>
+      <td class="price"><%= h number_to_currency order.total_wholesale_price %></td>
+    </tr>
+  </tbody>
+</table>

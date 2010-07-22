@@ -1,0 +1,9 @@
+<% remote_form_for  :order_line, order_line,
+                    :url => order_order_lines_path(order),
+                    :update => 'order-lines' do |f| %>
+  <fieldset>
+    <legend><%= t 'orders.new_order_line' %></legend>
+    <%= render :partial => '/order_lines/form', :locals => {:f => f, :order_line => order_line, :order => order} %>
+    <%= object_messages order_line %>
+  </fieldset>
+<% end %>

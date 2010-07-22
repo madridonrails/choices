@@ -1,0 +1,10 @@
+DEFAULT_TAXES = 16
+DEFAULT_EQUIVALENCE_SURCHARGE = 0
+DELIVERY_NOTE_PREFIX = 'AL-'
+DELIVERY_NOTE_SUFFIX = "'-' + Date.today.strftime('%y')"
+INVOICE_PREFIX = 'FACT-'
+INVOICE_SUFFIX = "'-' + Date.today.strftime('%y')"
+DATE_FORMAT = '%d/%m/%Y'
+DB_DATE_FORMAT = '%Y-%m-%d'
+ORDER_PREFIX = 'P-'
+ORDER_SUFFIX = ''

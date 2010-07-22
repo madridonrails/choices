@@ -1,0 +1,7 @@
+<h1><span><%= t 'orders.new_order' %></span></h1>
+<%  form_for @order, :url => orders_url do |f| %>
+  <fieldset>
+    <legend><%= t 'general.new' %><br/></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

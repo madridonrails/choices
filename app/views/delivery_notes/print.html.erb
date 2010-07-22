@@ -1,0 +1,13 @@
+<%= render :partial => '/delivery_notes/print/delivery_note_info', :locals => {:delivery_note => @delivery_note} %>
+<%= render :partial => '/delivery_notes/print/order_info', :locals => {:order => @delivery_note.order} %>
+<table id="print-order-lines-info">
+  <colgroup><col/><col/><col/><col/><col/></colgroup>
+  <%= render :partial => '/delivery_notes/print/header' %>
+  <tbody>
+  <%= render :partial => '/delivery_notes/print/order_line_info', :collection => @delivery_note.order.order_lines, :as => :order_line  %>
+  <%= render :partial => '/delivery_notes/print/order_lines_summary', :locals => {:order => @delivery_note.order} %>
+  </tbody>
+</table>
+
+
+

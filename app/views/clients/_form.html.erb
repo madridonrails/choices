@@ -1,0 +1,51 @@
+<ul>
+  <li>
+    <%= f.label :name, t('activerecord.attributes.client.name'), :class=>'span-3' %>
+    <%= f.text_field :name, :class=>'span-5'%>
+  </li>
+  <li>
+    <%= f.label :responsible, t('activerecord.attributes.client.responsible', :class => 'span-3') %>
+    <%= f.text_field :responsible, :class => 'span-5' %>
+  </li>
+  <li>
+    <%= f.label :cif, t('activerecord.attributes.client.cif'), :class => 'span-3' %>
+    <%= f.text_field :cif, :class=>'span-5'%>
+  </li>
+  <li>
+    <%= f.label :address, t('activerecord.attributes.client.address'), :class => 'span-3' %>
+    <%= f.text_field :address, :class => 'span-5' %>
+  </li>
+  <li>
+    <%= f.label :postal_code, t('activerecord.attributes.client.postal_code'), :class => 'span-3' %>
+    <%= f.text_field :postal_code, :class => 'span-5 last' %>
+  </li>
+  <li>
+    <%= f.label :city, t('activerecord.attributes.client.city'), :class => 'span-3' %>
+    <%= f.text_field :city, :class => 'span-5' %>
+  </li>
+  <li>
+    <%= f.label :town, t('activerecord.attributes.client.town'), :class => 'span-3' %>
+    <%= f.text_field :town, :class => 'span-5 last' %>
+  </li>
+  <li>
+    <%= f.label :taxes, t('activerecord.attributes.client.taxes'), :class => 'span-3' %>
+    <%= f.text_field :taxes, :class => 'span-5' %>
+  </li>
+  <li>
+    <%= f.label :days_to_pay, t('activerecord.attributes.client.days_to_pay'), :class => 'span-3' %>
+    <%= f.text_field :days_to_pay, :class => 'span-5 last' %>
+  </li>
+  <li>
+    <%= f.label :equivalence_surcharge, t('activerecord.attributes.client.equivalence_surcharge'), :class => 'span-3' %>
+    <%= f.text_field :equivalence_surcharge, :class => 'span-5 last' %>
+  </li>
+  <li>
+    <%= f.label :uneco, t('activerecord.attributes.client.uneco'), :class => 'span-3' %>
+    <%= f.text_field :uneco, :class => 'span-5 last' %>
+  </li>
+  <li>
+    <%= f.label :provider_code, t('activerecord.attributes.client.provider_code'), :class => 'span-3' %>
+    <%= f.text_field :provider_code, :class => 'span-5 last' %>
+  </li>
+  <%= form_buttons clients_url%>
+</ul>

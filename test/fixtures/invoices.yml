@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_id: 1
+  code: MyString
+  date: MyString
+  payment_method: MyString
+
+two:
+  order_id: 1
+  code: MyString
+  date: MyString
+  payment_method: MyString

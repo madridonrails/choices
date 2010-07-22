@@ -1,0 +1,8 @@
+<%= object_messages(@product) %>
+<h1><span><%= "#{t 'products.edit_product'} #{@product.code}" %></span></h1>
+<% form_for @product, product_url(@product), :method => :put do |f|%>
+  <fieldset>
+    <legend><%= t 'general.edit' %></legend>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  </fieldset>
+<% end %>

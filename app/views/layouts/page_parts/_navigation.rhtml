@@ -1,0 +1,19 @@
+<div id="navigation" class="span-22 last">
+  <ul>
+    <%
+      options_array = [
+        [t('navigation.items.products'), products_path],
+        [t('navigation.items.clients'), clients_path],
+        [t('navigation.items.orders'), orders_path],
+        [t('navigation.items.delivery_notes'), delivery_notes_path],
+        [t('navigation.items.invoices'), invoices_path]
+      ]
+    %>
+    <% unless options_array.blank? %>
+    <% options_array.each do |object| %>
+      <% str_class = object[1][1..100].starts_with?(params[:controller]) ? ' class="current"' : '' %>
+      <li<%= str_class%>><%= link_to "<span>#{object[0]}</span>", {:controller => object[1]} %></li>
+    <% end%>
+    <% end %>
+  </ul>
+</div>

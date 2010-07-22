@@ -1,0 +1,68 @@
+es-ES:
+  activerecord:
+    attributes:
+      client:
+        address: Dirección
+        cif: CIF
+        city: Ciudad
+        days_to_pay: Días de pago
+        equivalence_surcharge: Recargo de equivalencia
+        name: Nombre
+        postal_code: Código postal
+        provider_code: Número de proveedor
+        responsible: Responsable
+        taxes: I.V.A
+        town: Población
+        uneco: UNECO
+      client_product_customization:
+        client_id: Cliente
+        code: Código
+        product_id: Producto
+        wholesale_price: Precio
+      delivery_note:
+        code: Número de albarán
+        order_id: Pedido
+        packages: Número de bultos
+      invoice:
+        code: Número de factura
+        date: Fecha
+        expiration_date: Fecha de vencimiento
+        incidences: Incidencias
+        order_id: Pedido
+        paid: Pagado
+        payment_method: Forma de pago
+        state: Estado
+      order:
+        aasm_state: Estado
+        address: Dirección
+        cif: CIF
+        city: Ciudad
+        client_id: Cliente
+        code: Número de pedido cliente
+        date: Fecha
+        internal_code: Número pedido interno
+        name: Nombre
+        postal_code: Código postal
+        responsible: Responsable
+        town: Población
+      order_line:
+        code: Código
+        cost_price: Precio de coste
+        product_id: Producto
+        quantity: Cantidad
+        wholesale_price: Precio de venta
+      product:
+        code: Código de producto
+        cost_price: Precio de coste
+        description: Descripción
+        wholesale_price: Precio de venta
+    errors:
+      messages:
+        blank: no puede estar vacío
+        greater_than: tiene que ser mayor que {{count}}
+        not_a_number: tiene que ser un número
+        wholesale_price_or_code_must_be_filled_in: Precio o código deben rellenarse
+      models:
+    models:
+      delivery_note: Albarán
+      invoice: Factura

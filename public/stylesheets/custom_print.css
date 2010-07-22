@@ -1,0 +1,42 @@
+table{
+  margin-bottom: 1cm;
+  width:21cm;
+}
+table th{
+  background:#D3D3D3;
+  border-bottom:1px solid;
+}
+
+table col, table tr, table td{
+  padding:0;
+  margin:0;
+}
+
+table td{
+}
+
+#print-invoice-info, #print-delivery-note-info, #print-order-info{
+  text-align:center;
+}
+
+#print-order-summary, table td.price{
+  text-align:right;
+}
+
+#print-order-summary, table tr.summary td{
+  font-weight:bold;
+}
+
+table tr.summary td{
+  border-top:1px solid;
+}
+#print-order-summary{
+  width:10cm;
+}
+
+#print-order-info{
+}
+
+#print-order-lines-info{
+    border:1px solid;
+}

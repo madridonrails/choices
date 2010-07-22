@@ -1,0 +1,24 @@
+<h1><span><%= @client.name %></span></h1>
+<div class="show-info">
+  <ul>
+    <li><span><label><%= t 'activerecord.attributes.client.name' %>: </label><%= h @client.name %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.cif' %>: </label><%= h @client.cif %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.responsible' %>: </label><%= h(@client.responsible) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.taxes' %>: </label><%= h(@client.taxes) %> %</span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.equivalence_surcharge' %>: </label><%= h(@client.equivalence_surcharge) %> %</span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.uneco' %>: </label><%= h(@client.uneco) %></span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.provider_code' %>: </label><%= h(@client.provider_code) %></span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.days_to_pay' %>: </label><%= h(@client.days_to_pay) %> </span></li>
+  </ul>
+  <ul id="address-info">
+    <li><span><label><%= t 'activerecord.attributes.client.address' %>: </label><%= h(@client.address) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.postal_code' %>: </label><%= h(@client.postal_code) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.town' %>: </label><%= h(@client.town) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.client.city' %>: </label><%= h(@client.city) %> </span></li>
+  </ul>
+  <ul>
+    <li><%= link_to image_tag('pencil_16.png', :alt => t('general.edit')) + t('general.edit'), edit_client_url(@client), :class => 'button', :title => t('general.edit') %> <%= link_to image_tag('left_16.png', :alt => t('general.cancel')) + 'Volver', clients_url, :class => 'button', :title => t('general.cancel') %></li>
+  </ul>
+</div>
+
+

@@ -1,0 +1,9 @@
+<!--%= object_messages(@delivery_note) %-->
+<h1><span><%= t('delivery_notes.new_delivery_note') %></span></h1>
+  <%  form_for @delivery_note, :url => order_delivery_note_url(@order), :html => {:class => 'complex-form'} do |f| %>
+    <fieldset>
+      <legend><%= t 'general.new' %><br/></legend>
+      <%= render :partial => 'form', :locals => {:f => f} %>
+    </fieldset>
+<% end %>
+<%= render :partial => '/orders/order_resume', :locals => {:order => @order} %>

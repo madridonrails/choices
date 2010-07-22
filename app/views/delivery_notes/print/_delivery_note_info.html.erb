@@ -1,0 +1,21 @@
+<table id="print-delivery-note-info">
+  <colgroup><col/><col/><col/><col/><col/><col/></colgroup>
+  <thead>
+    <tr>
+      <th><%= t'delivery_notes.print.delivery_note_code' %></th>
+      <th><%= t'delivery_notes.print.uneco' %></th>
+      <th><%= t'delivery_notes.print.order_code' %></th>
+      <th><%= t'delivery_notes.print.provider' %></th>
+      <th><%= t'delivery_notes.print.packages' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= delivery_note.code %></td>
+      <td><%= delivery_note.order.uneco rescue ''%></td>
+      <td><%= delivery_note.order_code %></td>
+      <td><%= h delivery_note.order.client.provider_code rescue ''%></td>
+      <td><%= h delivery_note.packages %></td>
+    </tr>
+  </tbody>
+</table>

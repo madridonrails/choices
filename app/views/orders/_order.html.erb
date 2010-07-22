@@ -1,0 +1,18 @@
+<%unless order.blank?%>
+  <% td_class = cycle('', ' class="impar"') %>
+  <tr>
+    <td<%= td_class %>><%= h order.internal_code %> </td>
+    <td<%= td_class %>><%= h order.date %> </td>
+    <td<%= td_class %>><%= h order.client.name rescue t('orders.no_client_selected') %> </td>
+    <td<%= td_class %>><%= h order.responsible %></td>
+    <td<%= td_class %>><%= h order.code %></td>
+    <td<%= td_class %>><%= t"orders.states.#{order.aasm_current_state}" %>
+    <td align="center" <%= td_class %>>
+       <%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), order_url(order) %>
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_order_url(order) %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), order_url(order), :method => 'delete', :confirm => t('general.are_you_sure') %>
+       <%= link_to_delivery_note order%>
+       <%= link_to_invoice order%>
+    </td>
+  </tr>
+<% end %>

@@ -1,0 +1,7 @@
+    <tr>
+      <td><%= h order_line.code %></td>
+      <td><%= h order_line.quantity %></td>
+      <td><%= h order_line.product.description %></td>
+      <td class="price"><%= h number_to_currency(order_line.wholesale_price) rescue number_to_currency 0 %></td>
+      <td class="price"><%= h number_to_currency(order_line.total_price) rescue number_to_currency 0 %></td>
+    </tr>

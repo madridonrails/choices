@@ -1,0 +1,8 @@
+<%= render :partial => '/clients/show' if not @client.blank? %><br/>
+<%= render :partial => '/products/show' if not @product.blank? %><br/>
+<h2><%= t 'clients.customizations'%></h2>
+<div id="client-product-prices" class="ajaxforms">
+  <%=  render :partial => '/client_product_customizations/client/client_product_customizations' if not @client.blank? %>
+  <%=  render :partial => '/client_product_customizations/product/client_product_customizations' if not @product.blank? %>
+</div>
+

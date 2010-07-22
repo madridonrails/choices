@@ -1,0 +1,23 @@
+<table id="print-invoice-info">
+  <colgroup><col/><col/><col/><col/><col/><col/></colgroup>
+  <thead>
+    <tr>
+      <th><%= t'invoices.print.invoice_code' %></th>
+      <th><%= t'invoices.print.uneco' %></th>
+      <th><%= t'invoices.print.order_code' %></th>
+      <th><%= t'invoices.print.delivery_note_code' %></th>
+      <th><%= t'invoices.print.provider' %></th>
+      <th><%= t'invoices.print.payment_method' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= invoice.code %></td>
+      <td><%= invoice.order.uneco rescue ''%></td>
+      <td><%= invoice.order_code %></td>
+      <td><%= h invoice.order.delivery_note.code rescue ''%></td>
+      <td><%= h invoice.order.client.provider_code rescue ''%></td>
+      <td><%= h invoice.payment_method %></td>
+    </tr>
+  </tbody>
+</table>

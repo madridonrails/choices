@@ -1,0 +1,7 @@
+    <tr class="summary">
+      <td><%= t'delivery_notes.print.order_lines_total' %></td>
+      <td/>
+      <td/>
+      <td/>
+      <td class="price"><%= h number_to_currency(order.price_before_taxes) rescue number_to_currency 0 %></td>
+    </tr>

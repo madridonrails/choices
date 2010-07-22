@@ -1,0 +1,17 @@
+<%unless invoice.blank?%>
+  <% td_class = cycle('', ' class="odd"') %>
+  <tr>
+    <td<%= td_class %>><%= h invoice.order.code rescue '' %> </td>
+    <td<%= td_class %>><%= h invoice.code %></td>
+    <td<%= td_class %>><%= h invoice.order.client.name rescue '' %></td>
+    <td<%= td_class %>><%= h invoice.order.delivery_note.code rescue t'invoices.no_delivery_note' %></td>
+    <td<%= td_class %>><%= h invoice.order.client.provider_code rescue '' %></td>
+    <td<%= td_class %>><%= h invoice.payment_method rescue '' %></td>
+    <td align="center" <%= td_class %>>
+       <!--%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), invoice_url(invoice) %-->
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_invoice_url(invoice) %>
+       <%= link_to image_tag('print_16.png', :alt => t('general.print'), :title => t('general.print')), {:controller => :invoices, :action => :print, :id => invoice} %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), invoice_url(invoice), :method => 'delete', :confirm => t('general.are_you_sure') %>
+    </td>
+  </tr>
+<% end %>

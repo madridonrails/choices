@@ -1,0 +1,11 @@
+es-ES:
+  products:
+    create:
+      success: Producto creado con éxito
+    customizations: Especificar clientes
+    edit_product: Editar producto
+    new_product: Nuevo producto
+    no_products: No hay productos
+    products: Productos
+    update:
+      success: El producto se ha actualizado correctamente

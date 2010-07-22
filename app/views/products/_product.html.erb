@@ -1,0 +1,15 @@
+<%unless product.blank?%>
+  <% td_class = cycle('', ' class="odd"') %>
+  <tr>
+    <td<%= td_class %>><%= h product.code %> </td>
+    <td<%= td_class %>><%= h product.description %></td>
+    <td<%= td_class %>><%= product.cost_price.blank? ? t('general.no_price') : number_to_currency(h(product.cost_price)) %></td>
+    <td<%= td_class %>><%= product.wholesale_price.blank? ? t('general.no_price') : number_to_currency(h(product.wholesale_price)) %></td>
+    <td align="center" <%= td_class %>>
+       <%= link_to image_tag('show_16.png', :alt => t('general.show'),  :title => t('general.show' )), product_url(product) %>
+       <%= link_to image_tag('pencil_16.png', :alt => t('general.edit'), :title => t('general.edit' )), edit_product_url(product) %>
+       <%= link_to image_tag('user_male.png', :alt => t('general.customize'), :title => t('general.customize')), product_client_product_customizations_url(product) %>
+       <%= link_to image_tag('delete_16.png', :alt => t('general.delete'), :title =>  t('general.delete' )), product_url(product), :method => 'delete', :confirm => t('general.are_you_sure') %>
+    </td>
+  </tr>
+<% end %>

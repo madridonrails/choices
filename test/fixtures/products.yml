@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  description: MyString
+  cost_price: 1.5
+  whole_sale_price: 1.5
+
+two:
+  code: MyString
+  description: MyString
+  cost_price: 1.5
+  whole_sale_price: 1.5

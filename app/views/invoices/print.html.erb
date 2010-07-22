@@ -1,0 +1,14 @@
+<%= render :partial => '/invoices/print/invoice_info', :locals => {:invoice => @invoice} %>
+<%= render :partial => '/invoices/print/order_info', :locals => {:order => @invoice.order} %>
+<table id="print-order-lines-info">
+  <colgroup><col/><col/><col/><col/><col/></colgroup>
+  <%= render :partial => '/invoices/print/header' %>
+  <tbody>
+  <%= render :partial => '/invoices/print/order_line_info', :collection => @invoice.order.order_lines, :as => :order_line  %>
+  <%= render :partial => '/invoices/print/order_lines_summary', :locals => {:order => @invoice.order} %>
+  </tbody>
+</table>
+<%= render :partial => '/invoices/print/order_summary', :locals => {:order => @invoice.order} %>
+
+
+

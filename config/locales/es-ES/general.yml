@@ -1,0 +1,26 @@
+es-ES: 
+  general:
+    add: Añadir
+    are_you_sure: ¿Estás seguro?
+    accept: Aceptar
+    actions: Acciones
+    back: Volver
+    cancel: Cancelar
+    create: Crear
+    customize: Personalizar
+    delete: Borrar
+    edit: Editar
+    exit: Salir
+    filter: Filtrar
+    new: Nuevo
+    no_matter: No importa
+    no_price: Sin precio
+    "no": "No"
+    ok: OK
+    price_before_taxes: Importe bruto
+    print: Imprimir
+    show: Ver
+    total: Total
+    update: Modificar
+    vat: IVA
+    "yes": Sí

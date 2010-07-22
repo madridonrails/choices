@@ -1,0 +1,13 @@
+<h1><span><%= @product.description %></span></h1>
+<div class="show-info">
+  <ul class="append-11">
+    <li><span><label><%= t 'activerecord.attributes.product.code' %>: </label><%= h @product.code %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.product.cost_price' %>: </label><%= number_to_currency h(@product.cost_price) %> </span></li>
+    <li><span><label><%= t 'activerecord.attributes.product.wholesale_price' %>: </label><%= number_to_currency h(@product.wholesale_price) %> </span></li>
+    <li>
+      <%= link_to image_tag('pencil_16.png', :alt => t('general.edit')) + t('general.edit'), edit_product_url(@product), :class => 'button', :title => t('general.edit') %>
+      <%= link_to image_tag('left_16.png', :alt => t('general.cancel')) + 'Volver', products_url, :class => 'button', :title => t('general.cancel') %>
+    </li>
+  </ul>
+</div>
+
